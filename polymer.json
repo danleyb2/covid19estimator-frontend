@@ -7,7 +7,6 @@
   "extraDependencies": [
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/**",
-    "push-manifest.json"
   ],
   "builds": [
     {
