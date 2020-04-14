@@ -3,8 +3,6 @@ import { html,css } from 'lit-element';
 import { PageViewElement } from './page-view-element.js';
 import { store } from '../store.js';
 
-// These are the shared styles needed by this element.
-import { SharedStyles } from './shared-styles.js';
 import {updateLocationURL} from '../actions/app.js'
 
 
