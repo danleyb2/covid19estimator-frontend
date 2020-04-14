@@ -52,7 +52,285 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="my-app">
     <meta property="og:image" content="images/manifest/icon-144x144.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <style type="text/css">
+      *, ::after, ::before {
+        box-sizing: inherit;
+      }
+
+
+      blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
+        margin: 0;
+        padding: 0;
+      }
+
+
+      html {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #fff;
+        font-size: 16px;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        min-width: 300px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        text-rendering: optimizeLegibility;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+      body, button, input, select, textarea {
+        font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+      }
+
+      body {
+        color: #4a4a4a;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 100%;
+        font-weight: 400;
+      }
+
+      .is-size-2 {
+        font-size: 2.5rem!important;
+      }
+      .is-size-3 {
+        font-size: 2rem!important;
+      }
+
+      .has-text-centered {
+        text-align: center!important;
+      }
+
+      @media screen and (min-width: 769px), print {
+        .columns:not(.is-desktop) {
+          display: flex;
+        }
+      }
+
+
+
+      .columns {
+        margin-left: -.75rem;
+        margin-right: -.75rem;
+        margin-top: -.75rem;
+      }
+
+      .columns:last-child {
+        margin-bottom: -.75rem;
+      }
+
+      .column {
+        display: block;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: .75rem;
+      }
+
+
+      @media screen and (min-width: 769px), print {
+        .column.is-offset-one-quarter, .column.is-offset-one-quarter-tablet {
+          margin-left: 25%;
+        }
+      }
+
+      @media screen and (min-width: 769px), print {
+        .column.is-half, .column.is-half-tablet {
+          flex: none;
+          width: 50%;
+        }
+      }
+
+      .field:not(:last-child) {
+        margin-bottom: .75rem;
+      }
+
+      .label:not(:last-child) {
+        margin-bottom: .5em;
+      }
+
+      .label {
+        color: #363636;
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .control {
+        box-sizing: border-box;
+        clear: both;
+        font-size: 1rem;
+        position: relative;
+        text-align: left;
+      }
+
+      .button, .file-cta, .file-name, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .select select, .textarea {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-shadow: none;
+        display: inline-flex;
+        font-size: 1rem;
+        height: 2.5em;
+        justify-content: flex-start;
+        line-height: 1.5;
+        padding-bottom: calc(.5em - 1px);
+        padding-left: calc(.75em - 1px);
+        padding-right: calc(.75em - 1px);
+        padding-top: calc(.5em - 1px);
+        position: relative;
+        vertical-align: top;
+      }
+
+      .input, .select select, .textarea {
+        background-color: #fff;
+        border-color: #dbdbdb;
+        border-radius: 4px;
+        color: #363636;
+      }
+
+      .input, .textarea {
+        box-shadow: inset 0 0.0625em 0.125em rgba(10,10,10,.05);
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .select {
+        display: inline-block;
+        max-width: 100%;
+        position: relative;
+        vertical-align: top;
+      }
+      .select:not(.is-multiple) {
+        height: 2.5em;
+      }
+      .select.is-fullwidth {
+        width: 100%;
+      }
+
+      .select.is-fullwidth select {
+        width: 100%;
+      }
+
+      .select select:not([multiple]) {
+        padding-right: 2.5em;
+      }
+      .select select {
+        cursor: pointer;
+        display: block;
+        font-size: 1em;
+        max-width: 100%;
+        outline: 0;
+      }
+
+      .breadcrumb, .button, .delete, .file, .is-unselectable, .modal-close, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .tabs {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .button {
+        background-color: #fff;
+        border-color: #dbdbdb;
+        border-width: 1px;
+        color: #363636;
+        cursor: pointer;
+        justify-content: center;
+        padding-bottom: calc(.5em - 1px);
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: calc(.5em - 1px);
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .button.is-black {
+        background-color: #0a0a0a;
+        border-color: transparent;
+        color: #fff;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      .table {
+        background-color: #fff;
+        color: #363636;
+      }
+
+      .block:not(:last-child), .box:not(:last-child), .breadcrumb:not(:last-child), .content:not(:last-child), .highlight:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .notification:not(:last-child), .pagination:not(:last-child), .progress:not(:last-child), .subtitle:not(:last-child), .table-container:not(:last-child), .table:not(:last-child), .tabs:not(:last-child), .title:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      .table.is-fullwidth {
+        width: 100%;
+      }
+      .table tbody {
+        background-color: transparent;
+      }
+
+      td, th {
+        padding: 0;
+      }
+      table td, table th {
+        vertical-align: top;
+      }
+      table th {
+        color: #363636;
+      }
+
+      td:not([align]), th:not([align]) {
+        text-align: left;
+      }
+      .table td, .table th {
+        border: 1px solid #dbdbdb;
+        border-width: 0 0 1px;
+        padding: .5em .75em;
+        vertical-align: top;
+      }
+      .table th {
+        color: #363636;
+      }
+
+      table td:not([align]), table th:not([align]) {
+        text-align: left;
+      }
+      .table th:not([align]) {
+        text-align: left;
+      }
+
+      .table.is-bordered td, .table.is-bordered th {
+        border-width: 1px;
+      }
+
+      .table.is-narrow td, .table.is-narrow th {
+        padding: .25em .5em;
+      }
+
+      .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+        background-color: #fafafa;
+      }
+
+      .table tbody tr:last-child td, .table tbody tr:last-child th {
+        border-bottom-width: 0;
+      }
+      .table.is-bordered tr:last-child td, .table.is-bordered tr:last-child th {
+        border-bottom-width: 1px;
+      }
+
+    </style>
 
 
     <!-- Performance tip: hint to the browser to start the handshake for the fonts site -->
@@ -108,8 +386,6 @@
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>
-    <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
-    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <!-- Built with love using PWA Starter Kit -->
     <script type="module" src="src/components/my-app.js"></script>
   </body>
