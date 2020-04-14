@@ -20,43 +20,43 @@ class MyView1 extends PageViewElement {
   <div class="column is-half is-offset-one-quarter">
     
     <div class="field">
-  <label class="label">Population</label>
+  <label class="label" for="population">Population</label>
 <div class="control">
 
-<input type="number" class="input" name="population" data-population  placeholder="Population">
+<input type="number" class="input" id="population" name="population" data-population  placeholder="Population">
 </div>
 </div>
 
 
 
 <div class="field">
-  <label class="label">Reported Cases</label>
+  <label class="label" for="reported-cases">Reported Cases</label>
 <div class="control">
 
-<input type="text" class="input" name="reported-cases" data-reported-cases placeholder="Reported Cases"> 
+<input type="text" class="input" name="reported-cases" id="reported-cases" data-reported-cases placeholder="Reported Cases"> 
 </div>
 </div>
 
 <div class="field">
-  <label class="label">Total Hospital Beds</label>
+  <label class="label" for="total-hospital-beds">Total Hospital Beds</label>
 <div class="control">
 
-<input type="number" class="input" name="total-hospital-beds" data-total-hospital-beds placeholder="Total Hospital Beds"> 
+<input type="number" class="input" name="total-hospital-beds" id="total-hospital-beds" data-total-hospital-beds placeholder="Total Hospital Beds"> 
 </div>
 </div>
 
 <div class="field">
-  <label class="label">Time To Elapse</label>
+  <label class="label" for="time-to-lapse">Time To Elapse</label>
 <div class="control">
 
-<input type="text" class="input" name="time-to-lapse" data-time-to-lapse  placeholder="Time To Elapse"> 
+<input type="text" class="input" name="time-to-lapse" id="time-to-lapse" data-time-to-lapse  placeholder="Time To Elapse"> 
 </div>
 </div>
 <div class="field">
-  <label class="label">Period Type</label>
+  <label class="label" for="data-period-type">Period Type</label>
 <div class="control">
 <div class="select is-fullwidth">
-<select data-period-type >
+<select data-period-type id="data-period-type">
 
 <option value="days">Days</option>
 <option value="weeks">Weeks</option>
@@ -72,7 +72,7 @@ class MyView1 extends PageViewElement {
   
 <div class="control">
 
-<button @click="${this.estimate}" class="button is-primary">Estimate</button>
+<button @click="${this.estimate}" class="button is-black">Estimate</button>
 </div>
 </div>
 </div>
