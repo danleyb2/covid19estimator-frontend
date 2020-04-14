@@ -5,6 +5,7 @@
     "images/**/*"
   ],
   "extraDependencies": [
+    "robots.txt",
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/**"
   ],
